@@ -1,0 +1,22 @@
+/* Footer.css */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  background-color: #e5a8a8;
+  color: #fff;
+  text-align: center;
+}
+
+.social-icon {
+  display: flex;
+  gap: 1em; 
+  justify-content: center;
+  margin-top: 0.2em;
+}
+
+.social-icon img {
+  width: 30px; 
+  height: 30px;
+}

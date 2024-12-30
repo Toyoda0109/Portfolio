@@ -1,0 +1,5 @@
+/* 横スクロールを無効にする */
+body, html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}

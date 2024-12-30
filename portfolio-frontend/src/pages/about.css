@@ -1,0 +1,151 @@
+@font-face {
+  font-family: 'Josefin Sans Light';
+  src: url('../assets/fonts/josefin-sans-light-2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.about-head-title {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Josefin Sans Light', sans-serif;
+  color: #b77dab;
+  font-size: clamp(50px, 6vw, 75px);
+  border-bottom: 2px solid #b77dab;
+  padding-bottom: 10px;
+}
+
+.portfolio-header-img {
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+}
+
+.about-container{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-content {
+  background-color: rgb(228, 241, 242);
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.profile-img {
+  width: 25vw;
+  max-width: 200px;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1; 
+}
+
+.profile-info {
+  padding-left: 20px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.profile-info h3{
+  text-align: center;
+  font-size: clamp(16px, 4vw, 32px);
+}
+
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.about-website-content {
+  margin-top: 50px;
+  background-color: rgb(228, 241, 242);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.skills-content{
+  margin-top: 50px;
+  background-color: rgb(228, 241, 242);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.about-website-section h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.tech-section h2,
+.skills-subsection h2 {
+  font-size: clamp(24px, 4vw, 36px);
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: #333;
+  margin-bottom: 50px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.tech-section h2::after,
+.skills-subsection h2::after {
+  content: '';
+  display: block;
+  width: 25%;
+  height: 2px;
+  background-color:#727272;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+
+.tech-section {
+  margin-top: 30px;
+}
+
+.tech-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 150px;
+}
+
+.tech-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.tech-descriptions li {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+/* ぼやけエフェクトの定義 */
+.blur-in {
+  filter: blur(8px);
+  opacity: 1;
+  transition: filter 1s ease-out, opacity 1s ease-out;
+}
+
+.blur-in.visible {
+  filter: blur(0); 
+  opacity: 1;
+}

@@ -1,0 +1,109 @@
+.plugin-page {
+  display: flex;
+  padding-top: 80px;
+  width: 100vw;
+  background-color: #ffffff;
+}
+
+.plugin-meta {
+  margin-top: 0.5em;
+}
+
+.tag {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+
+#PLUGIN_OVERVIEW,
+#PLUGIN_USAGE,
+#CHORD_LOGIC,
+#PLUGIN_DOWNLOAD,
+#PLUGIN_POST {
+  margin-bottom: 60px;
+  padding-top: 20px;
+}
+
+/* コンテンツ領域のスタイル */
+.plugin-content {
+  width: 70%;
+  margin-left: 25%;
+  text-align: left;
+}
+
+@media (max-width: 1300px) {
+  .plugin-content {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+}
+
+/* 見出しのデザイン */
+.main-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 4px double #619f60;
+  border-radius: 15px;
+  color: #62a061;
+}
+
+.sub-heading {
+  font-size: 1.3em;
+  font-weight: normal;
+  border-bottom: 2px solid #a0cfa0;
+  color: #7ab97a;
+  margin-top: 45px;
+  margin-bottom: 20px;
+}
+
+/* 画像スタイル */
+.plugin-title-image,
+.plugin-sub-image{
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.plugin-function-image {
+  width: 40%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+
+.video-container {
+  max-height: 75%;
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.plugin-burden-images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.plugin-item img {
+  width: 40vw;
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 0.5em;
+}
+
+.plugin-item {
+  text-align: center;
+}

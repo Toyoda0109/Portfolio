@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Josefin Sans Light';
+  src: url('../assets/fonts/josefin-sans-light-2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.contact-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-form {
+  width: 80%; 
+  max-width: 600px;
+  padding: 20px;
+}
+
+.contact-form h1 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Josefin Sans Light', sans-serif;
+  color: #b77dab;
+  font-size: 75px;
+}
+
+.custom-btn {
+  background-color: #b77dab !important;
+  color: #fff !important;
+  border-radius: 5px !important;
+}
+
+.thank-you-message {
+  font-size: 3em;
+  font-family: 'Josefin Sans Light', sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  color: #b77dab;
+}
+

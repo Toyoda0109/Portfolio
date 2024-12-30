@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'Josefin Sans Light';
+  src: url('../assets/fonts/josefin-sans-light-2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* コンテナ設定 */
+.hello-world-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 枠線の設定 */
+.hello-world-border {
+  padding: 90px 90px;
+  border: 2px solid white;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+/* テキストのフェードアウトとウェーブアニメーション */
+.hello-world-text {
+  font-family: 'Josefin Sans Light', sans-serif;
+  font-size: clamp(40px, 5vw, 60px);
+  white-space: nowrap;
+  margin-bottom: 20px;
+  color: rgb(132, 132, 132);
+  animation: fadeOutMove 0.7s 1.5s forwards cubic-bezier(0.9, 0, 0.4, 1);
+  z-index: 25;
+}
+
+.wave-text {
+  display: inline-block;
+  opacity: 0;
+  animation: waveAppear 0.5s forwards ease-in-out;
+  margin-bottom: 1.2em;
+}
+
+/* オーバーレイ設定 */
+.left-triangle-overlay,
+.right-triangle-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; /* 基本オーバーレイのz-index */
+  transform-origin: center;
+  background-color: rgb(174, 252, 174);
+}
+
+/* 左右のオーバーレイアニメーション */
+.left-triangle-overlay {
+  clip-path: polygon(0% 0%, 101% 0%, 0% 101%);
+  animation: slideLeftTriangle 0.6s forwards ease-in-out 2s;
+}
+
+.right-triangle-overlay {
+  clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+  animation: slideRightTriangle 0.4s forwards ease-in-out 2s;
+}
+
+/* 後に始動するオーバーレイ（オーバーレイ1） */
+.left-triangle-overlay.delay-positive {
+  background-color: #dedede;
+  animation: slideLeftTriangle 0.4s forwards ease-in-out 2.13s;
+  z-index: 9;
+}
+
+.right-triangle-overlay.delay-positive {
+  background-color: #dedede;
+  animation: slideRightTriangle 0.4s forwards ease-in-out 2.13s;
+  z-index: 9;
+}
+
+/* 先に始動するオーバーレイ（オーバーレイ1） */
+.left-triangle-overlay.delay-negative1 {
+  background-color: #e9ebff;
+  animation: slideLeftTriangle 0.6s forwards ease-in-out 1.86s;
+  z-index: 15;
+}
+
+.right-triangle-overlay.delay-negative1 {
+  background-color: #e9ebff;
+  animation: slideRightTriangle 0.6s forwards ease-in-out 1.86s;
+  z-index: 15;
+}
+
+/* さらに先に始動するオーバーレイ（オーバーレイ2） */
+.left-triangle-overlay.delay-negative2 {
+  background-color: #fffcd2;
+  animation: slideLeftTriangle 0.8s forwards ease-in-out 1.73s;
+  z-index: 16;
+}
+
+.right-triangle-overlay.delay-negative2 {
+  background-color: #fffde2;
+  animation: slideRightTriangle 0.8s forwards ease-in-out 1.73s;
+  z-index: 16;
+}
+
+/* さらに先に始動するオーバーレイ（オーバーレイ3） */
+.left-triangle-overlay.delay-negative3 {
+  background-color: hsl(330, 64%, 90%);
+  animation: slideLeftTriangle 1.0s forwards ease-in-out 1.6s; 
+  z-index: 17;
+}
+
+.right-triangle-overlay.delay-negative3 {
+  background-color: hsl(330, 64%, 90%);
+  animation: slideRightTriangle 1.0s forwards ease-in-out 1.6s; 
+  z-index: 17;
+}
+
+/* さらに先に始動するオーバーレイ（オーバーレイ0） */
+.left-triangle-overlay.delay-negative0 {
+  background-color: hsl(72, 63%, 97%);
+  animation: slideLeftTriangle 2.0s forwards ease-in-out 1.0s; 
+  z-index: 18;
+}
+
+.right-triangle-overlay.delay-negative0 {
+  background-color: hsl(219, 100%, 96%);
+  animation: slideRightTriangle 2.0s forwards ease-in-out 1.0s; 
+  z-index: 18;
+}
+
+/* スライドアニメーション */
+@keyframes slideLeftTriangle {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideRightTriangle {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ウェーブアニメーション */
+@keyframes waveAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 線のアニメーション設定 */
+.underline {
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  height: 3px;
+  width: 0;
+  background-color: rgb(138, 138, 138);
+  animation: lineGrow 0.5s forwards ease-in 0.6s, lineShrink 0.6s forwards ease 2.1s; 
+  z-index: 20;
+}
+
+/* 線がX軸に沿って右方向に伸びるアニメーション */
+@keyframes lineGrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 40vw;;
+  }
+}
+
+@keyframes lineShrink {
+  0% {
+    width: 40vw;
+    left: 30%;
+  }
+  10% {
+    width: 50vw;
+    left: 25%;
+  }
+  100% {
+    width: 0;
+    left: 50%;
+  }
+}
+
+/* フェードアウト移動アニメーション */
+@keyframes fadeOutMove {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-35px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}

@@ -1,0 +1,89 @@
+/* サイドバーのスタイル */
+.sidebar {
+  width: 20%;
+  position: fixed; /* スクロールしてもサイドバーは固定 */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #eaeaea;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-main-heading{
+  color: #737272;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.sidebar-sub-heading{
+  color: #737272;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* リスト全体にスペースを追加 */
+.sidebar ul {
+  padding-top: 20px;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* 見出し1（親項目）のリスト項目 */
+.sidebar-item {
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* サブリスト項目のスタイル */
+.sidebar-subitem {
+  padding-left: 20px;
+  margin-bottom: 10px;
+  display: block;
+  text-align: left;
+}
+
+/* バレットのデザイン（見出し1のバレット） */
+.bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #a6afb0;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* サブリスト（見出し2）のバレット */
+.bullet-sub {
+  width: 5px;
+  height: 5px;
+  background-color: #c5c5c5;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+@media (max-width: 1300px) {
+  .sidebar {
+    display: none; /* モバイルでは左側サイドバーを非表示にする */
+  }
+}
+
+.sidebar-main-heading.active {
+  color: rgb(183, 183, 183);
+  font-weight: bold;
+}
+
+.sidebar-main-heading {
+  display: inline-block;
+  transition: transform 0.3s ease; /* 移動時のモーション */
+}
+
+.sidebar-main-heading.active {
+  transform: translateX(10px); /* アクティブ時に右に10px移動 */
+  font-weight: bold;
+}
