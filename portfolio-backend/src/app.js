@@ -4,7 +4,7 @@ const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const authRoutes = require('./routes/authRoutes');
 const contactRoutes = require('./routes/contactRoutes');
-const downloadRoutes = require('./routes/downloadRoutes'); // ダウンロードルートを追加
+const downloadRoutes = require('./routes/downloadRoutes');
 const { FRONTEND_URL, AUTH_PORT, CONTACT_PORT, DOWNLOAD_PORT } = require('./config/constants');
 
 // 認証サーバーの設定
