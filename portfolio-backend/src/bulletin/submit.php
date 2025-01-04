@@ -16,9 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // データベース接続情報
-$dsn = 'mysql:host=bulletin-board.cvckuq00a71s.ap-northeast-1.rds.amazonaws.com;dbname=bulletin_board;charset=utf8';
-$username = 'KODAI'; // RDSのユーザー名
-$password = 'Toyoda0109'; // RDSのパスワード
+$dsn = '***';
+$username = '***'; // RDSのユーザー名
+$password = '***'; // RDSのパスワード
 
 // データベース接続設定
 $options = [

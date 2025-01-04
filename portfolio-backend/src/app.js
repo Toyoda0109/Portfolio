@@ -33,7 +33,7 @@ downloadApp.use('/api', downloadRoutes);
 
 // 認証サーバーの起動
 authApp.listen(AUTH_PORT, () => {
-  console.log(`認証サーバーがポート ${AUTH_PORT} で稼働しました`);
+  console.log(`認証サーバーがポート ${AUTH_PORT} で起動しました`);
 });
 
 // お問い合わせサーバーの起動
